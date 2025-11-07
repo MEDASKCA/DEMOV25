@@ -6,21 +6,51 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed:royal-london": "node scripts/runSeed.js",
+    "seed:royal-london-staff": "npx tsx scripts/seed-royal-london-staff-realistic.ts",
+    "delete:staff": "npx tsx scripts/delete-staff-collection.ts",
+    "seed:consultants": "npx tsx scripts/seedConsultants.ts",
+    "seed:staff": "npx tsx scripts/seedStaffAllocations.ts",
+    "seed:profiles": "npx tsx scripts/seedStaffProfiles.ts",
+    "seed:rosters": "npx tsx scripts/seedStaffRosters.ts",
+    "seed:rosters:allocations": "npx tsx scripts/seedRostersFromAllocations.ts",
+    "seed:leave": "npx tsx scripts/seedLeave.ts",
+    "migrate:user-profile": "npx tsx scripts/migrateUserProfile.ts",
+    "migrate:role-names": "npx tsx scripts/migrateRoleNames.ts",
+    "verify:profiles": "npx tsx scripts/verifyProfiles.ts",
+    "cleanup:profiles": "npx tsx scripts/cleanupProfiles.ts",
+    "cleanup:duplicates": "npx tsx scripts/cleanupDuplicateTheatres.ts",
+    "cleanup:all": "npx tsx scripts/cleanupAll.ts",
+    "verify:seeding": "npx tsx scripts/verifySeeding.ts",
+    "assign:consultants": "npx tsx scripts/assignAvailableConsultants.ts"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "firebase": "^12.4.0",
+    "framer-motion": "^12.23.24",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.548.0",
+    "next": "16.0.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "next": "16.0.1"
+    "react-leaflet": "^5.0.0",
+    "tailwind-merge": "^3.3.1",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
+    "@types/leaflet": "^1.9.21",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
-    "eslint-config-next": "16.0.1"
+    "eslint-config-next": "16.0.1",
+    "tailwindcss": "^4",
+    "tsx": "^4.20.6",
+    "typescript": "^5"
   }
 }
